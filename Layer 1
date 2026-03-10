@@ -1,0 +1,34 @@
+graph TB
+    subgraph AI[人工智能概念层]
+        A1[预训练]
+        A2[泛化]
+        A3[特征提取]
+        A4[迭代验证]
+        A5[可解释性]
+    end
+    
+    subgraph Music[音乐创作对应层]
+        M1[引子+主题<br/>第1-61小节]
+        M2[第二至四部分<br/>第62-307小节]
+        M3[核心音程/节奏型提炼]
+        M4[段落间材料测试]
+        M5[段落关联可感知]
+    end
+    
+    subgraph Implementation[具体实现层]
+        I1[核心材料集中呈示]
+        I2[材料多语境迁移]
+        I3[降维为可操作参数]
+        I4[稳定性检验]
+        I5[结构记忆建立]
+    end
+    
+    A1 --> M1 --> I1
+    A2 --> M2 --> I2
+    A3 --> M3 --> I3
+    A4 --> M4 --> I4
+    A5 --> M5 --> I5
+    
+    style AI fill:#2E5090,color:#fff
+    style Music fill:#D96C00,color:#fff
+    style Implementation fill:#008040,color:#fff
