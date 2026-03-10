@@ -1,0 +1,52 @@
+graph TB
+    subgraph Layer3[核心动机层]
+        M1[动机a<br/>小二/小三/大二/小六]
+        M2[动机b<br/>小二/大二/小三/纯五]
+        M3[动机c<br/>纯四/小三/大二/纯五/小二]
+        M4[动机d<br/>大二/小二/纯四/大三/增四]
+    end
+    
+    subgraph Layer1[预训练数据层]
+        A1[引子<br/>1-16小节]
+        A2[主题Ⅰ<br/>17-22小节]
+        A3[主题Ⅱ<br/>23-35小节]
+        A4[主题Ⅲ<br/>36-61小节]
+    end
+    
+    subgraph Layer5[维度层]
+        D1[时间·横向]
+        D2[配器·纵向]
+    end
+    
+    subgraph Layer4[多模态层]
+        C1[音高]
+        C2[节奏]
+        C3[音色]
+    end
+    
+    subgraph Layer2[泛化层]
+        B1[第二部分<br/>62-141]
+        B2[第三部分<br/>142-178]
+        B3[第四部分<br/>179-307]
+    end
+    
+    subgraph Layer6[听觉验证层]
+        E1[可辨识性]
+        E2[可追踪性]
+        E3[稳定性]
+        E4[可迁移性]
+        E5[审美统一性]
+    end
+    
+    Layer3 --> Layer1
+    Layer1 --> Layer2
+    Layer5 --> Layer4
+    Layer4 --> Layer2
+    Layer2 --> Layer6
+    
+    style Layer1 fill:#2E5090,color:#fff
+    style Layer2 fill:#D96C00,color:#fff
+    style Layer3 fill:#008040,color:#fff
+    style Layer4 fill:#6B3FA0,color:#fff
+    style Layer5 fill:#5A5A5A,color:#fff
+    style Layer6 fill:#C00000,color:#fff
