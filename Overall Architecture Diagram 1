@@ -1,0 +1,33 @@
+flowchart TD
+    subgraph A[预训练阶段 Pre-training<br>]
+        direction LR
+        A1[引子<br>短笛/小军鼓/三角铁] --> A2[主题陈述<br>] --> A3[特征确立<br>音高/节奏/音色基础]
+    end
+
+    A3 --> B{泛化展开<br>Generalization}
+
+    subgraph C[音高组织泛化<br>]
+        C1[动机激活<br>] --> C2[动机变体<br>] --> C3[动机泛化<br>]
+    end
+
+    subgraph D[节奏组织泛化<br>]
+        D1[横向节奏泛化<br>时间维度扩展] --> D2[纵向节奏泛化<br>对位视角下的材料重组]
+    end
+
+    subgraph E[配器与结构泛化<br>]
+        E1[宏观“多模态”结构] --> E2[微观音色设计<br>音区/奏法/混合音色]
+    end
+
+    B --> C
+    B --> D
+    B --> E
+
+    C & D & E --> F[作品表达与展望<br>]
+    F --> F1[跨学科思维耦合]
+    F --> F2[未来创作展望]
+
+    style A fill:#e1f5fe,stroke:#01579b
+    style C fill:#f3e5f5,stroke:#4a148c
+    style D fill:#e8f5e8,stroke:#1b5e20
+    style E fill:#fff3e0,stroke:#ef6c00
+    style F fill:#fce4ec,stroke:#c2185b
